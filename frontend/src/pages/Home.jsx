@@ -295,7 +295,7 @@ const Home = () => {
       <section className="px-4 py-12">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-8 text-center">
-            Answers
+            FAQs
           </h2>
           <Accordion type="single" collapsible className="bg-card rounded-lg p-6">
             <AccordionItem value="item-1">
