@@ -63,24 +63,27 @@ const Home = () => {
   const testimonials = [
     {
       name: 'Sarah Chen',
-      role: 'Data Analyst',
+      role: 'Data Analyst at Google',
       location: 'San Francisco',
-      text: "I learned more in two weeks than I did in months of random YouTube browsing. The AI knows exactly what I need next.",
+      text: 'I transitioned from marketing to data analytics in 4 months. The structured learning path and real-world projects helped me land my dream role at Google.',
       rating: 5,
+      image: 'https://images.unsplash.com/photo-1762341122735-d6ae18da4c01',
     },
     {
       name: 'Marcus Johnson',
-      role: 'Marketing Manager',
+      role: 'Product Manager at Stripe',
       location: 'New York',
-      text: 'Finally, a way to learn without feeling overwhelmed. The structured approach makes everything click.',
+      text: 'Upskilled from engineer to PM while working full-time. Got promoted within 6 months of completing the product management track.',
       rating: 5,
+      image: 'https://images.unsplash.com/photo-1758691737207-e75821e080cb',
     },
     {
       name: 'Priya Patel',
-      role: 'UX Designer',
+      role: 'Senior UX Designer at Airbnb',
       location: 'London',
-      text: 'The quizzes and summaries help me retain everything. Best learning tool I\'ve used.',
+      text: 'Broke into UX design with zero experience. The portfolio projects from this platform were key to landing interviews at top tech companies.',
       rating: 5,
+      image: 'https://images.unsplash.com/photo-1765648763932-43a3e2f8f35c',
     },
   ];
 
