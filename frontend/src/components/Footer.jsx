@@ -16,68 +16,68 @@ export const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-semibold mb-4">Learn faster</h3>
+            <h3 className="font-semibold mb-4">Career Paths</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm hover:underline">
-                  Learning paths
+                <Link to="/learning-path" className="text-sm hover:underline">
+                  Data Analytics
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm hover:underline">
-                  Career tracks
+                <Link to="/learning-path" className="text-sm hover:underline">
+                  Product Management
                 </Link>
               </li>
               <li>
                 <Link to="/trending" className="text-sm hover:underline">
-                  Trending now
+                  All Career Tracks
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm hover:underline">
-                  Start learning
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Explore more</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-sm hover:underline">
-                  Popular topics
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-sm hover:underline">
-                  My progress
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-sm hover:underline">
-                  Discover skills
+                <Link to="/" className="text-sm hover:underline">
+                  Start Building Skills
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Get started</h3>
+            <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="#" className="text-sm hover:underline">
-                  Why use AI paths
+                  Career Success Stories
+                </Link>
+              </li>
+              <li>
+                <Link to="/achievements" className="text-sm hover:underline">
+                  Track Progress
                 </Link>
               </li>
               <li>
                 <Link to="#" className="text-sm hover:underline">
-                  How it works
+                  Interview Prep
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="#" className="text-sm hover:underline">
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link to="#" className="text-sm hover:underline">
-                  Live demos
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="text-sm hover:underline">
+                  Contact
                 </Link>
               </li>
             </ul>
