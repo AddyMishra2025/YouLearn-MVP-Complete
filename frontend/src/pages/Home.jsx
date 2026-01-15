@@ -311,12 +311,20 @@ const Home = () => {
       {/* Testimonials */}
       <section className="px-4 py-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-8 text-center">
-            What learners are saying...
-          </h2>
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="mb-4">
+              Success Stories
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Real career transformations
+            </h2>
+            <p className="text-primary-foreground/80">
+              See how professionals like you landed their dream roles
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
@@ -325,12 +333,24 @@ const Home = () => {
                     />
                   ))}
                 </div>
-                <p className="text-sm mb-4">{testimonial.text}</p>
-                <div>
-                  <p className="font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.role} • {testimonial.location}
-                  </p>
+                <p className="text-sm mb-6 leading-relaxed">{testimonial.text}</p>
+                <div className="flex items-center gap-3 pt-4 border-t">
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                    <img
+                      src={`${testimonial.image}?w=100&h=100&fit=crop&q=80`}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.role}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.location}
+                    </p>
+                  </div>
                 </div>
               </Card>
             ))}
