@@ -179,15 +179,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Popular Topics */}
+      {/* Popular Career Tracks */}
       <section className="px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-4">
+              Most In-Demand Roles
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Jump into what matters
+              Start building skills for your target role
             </h2>
             <p className="text-primary-foreground/80">
-              Choose a skill below and let AI build your path instantly
+              Choose a career path and let AI create your personalized learning roadmap
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
@@ -199,7 +202,7 @@ const Home = () => {
                 onClick={() => {
                   setSearchQuery(topic);
                   navigate('/learning-path', {
-                    state: { query: topic, mode: 'quick', generated: true },
+                    state: { query: topic, mode: 'career', generated: true },
                   });
                 }}
               >
