@@ -371,24 +371,36 @@ const LearningPath = () => {
                               key={lesson.id}
                               className="p-6 hover:shadow-lg transition-shadow"
                             >
-                              <Icon className="w-8 h-8 text-primary mb-3" />
-                              <h4 className="text-lg font-semibold mb-2">
-                                {lesson.title}
-                              </h4>
-                              <p className="text-sm text-muted-foreground mb-3">
-                                {lesson.description}
-                              </p>
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm text-muted-foreground">
-                                  {lesson.duration}
-                                </span>
-                                <Button
-                                  variant="link"
-                                  className="p-0 h-auto"
-                                  onClick={() => handleStartLesson(lesson.id)}
-                                >
-                                  Play <ArrowRight className="w-4 h-4 ml-1" />
-                                </Button>
+                              <div className="flex items-start gap-3 mb-4">
+                                <Icon className="w-8 h-8 text-primary flex-shrink-0" />
+                                <div className="flex-1">
+                                  <div className="flex flex-wrap gap-2 mb-2">
+                                    <Badge variant="outline" className="text-xs">
+                                      {lesson.levelMatch}
+                                    </Badge>
+                                    <Badge variant="secondary" className="text-xs">
+                                      {lesson.reason}
+                                    </Badge>
+                                  </div>
+                                  <h4 className="text-lg font-semibold mb-2">
+                                    {lesson.title}
+                                  </h4>
+                                  <p className="text-sm text-muted-foreground mb-3">
+                                    {lesson.description}
+                                  </p>
+                                  <div className="flex items-center justify-between">
+                                    <span className="text-sm text-muted-foreground">
+                                      {lesson.duration}
+                                    </span>
+                                    <Button
+                                      variant="link"
+                                      className="p-0 h-auto"
+                                      onClick={() => handleStartLesson(lesson.id)}
+                                    >
+                                      Play <ArrowRight className="w-4 h-4 ml-1" />
+                                    </Button>
+                                  </div>
+                                </div>
                               </div>
                             </Card>
                           );
