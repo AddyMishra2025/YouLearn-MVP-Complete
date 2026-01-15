@@ -7,7 +7,12 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Progress } from '../components/ui/progress';
-import { Play, Clock, Target, TrendingUp, Layers, ArrowRight } from 'lucide-react';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '../components/ui/collapsible';
+import { Play, Clock, Target, TrendingUp, Layers, ArrowRight, ChevronDown, CheckCircle, Sparkles } from 'lucide-react';
 
 const LearningPath = () => {
   const location = useLocation();
