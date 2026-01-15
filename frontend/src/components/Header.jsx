@@ -36,7 +36,7 @@ export const Header = ({ showBack = false }) => {
             Trending
           </Link>
           <Link
-            to="#"
+            to="/achievements"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             Achievements
@@ -50,10 +50,14 @@ export const Header = ({ showBack = false }) => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm">
-            Sign in
-          </Button>
-          <Button size="sm">Start</Button>
+          <Link to="/signin">
+            <Button variant="outline" size="sm">
+              Sign in
+            </Button>
+          </Link>
+          <Link to="/start">
+            <Button size="sm">Start</Button>
+          </Link>
         </div>
       </div>
     </header>
