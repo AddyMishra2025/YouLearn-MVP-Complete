@@ -7,6 +7,13 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
+        {/* Back to Home CTA */}
+        <div className="text-center py-8 border-b border-primary-foreground/20 mb-8">
+          <Link to="/" className="inline-flex items-center gap-2 text-lg font-semibold hover:underline">
+            <span>← Back to Home</span>
+          </Link>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-semibold mb-4">Learn faster</h3>
