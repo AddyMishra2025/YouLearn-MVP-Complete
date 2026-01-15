@@ -13,9 +13,9 @@ const LearningPath = () => {
   const navigate = useNavigate();
   const [mode, setMode] = useState(location.state?.mode || 'quick');
   const [selectedLevel, setSelectedLevel] = useState(
-    location.state?.difficulty || null
+    location.state?.difficulty || location.state?.level || null
   );
-  const [selectedRole, setSelectedRole] = useState(null);
+  const [selectedRole, setSelectedRole] = useState(location.state?.role || null);
   const [query, setQuery] = useState(location.state?.query || 'Python');
 
   const levels = ['Beginner', 'Intermediate', 'Advanced'];
