@@ -100,15 +100,33 @@ const LessonView = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
             {lesson.title}
           </h1>
-          <p className="text-primary-foreground/80">{lesson.subtitle}</p>
+          <p className="text-primary-foreground/80 mb-3">{lesson.subtitle}</p>
+          
+          {/* Why This Lesson - Trust Signal */}
+          <div className="bg-primary-foreground/10 rounded-lg p-4 mb-6">
+            <p className="text-sm font-semibold text-primary-foreground mb-1">
+              Why this lesson?
+            </p>
+            <p className="text-sm text-primary-foreground/80">
+              Introduces core concepts needed for the next lesson. Builds foundation for intermediate topics.
+            </p>
+          </div>
+          
           <div className="mt-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-primary-foreground/80">
                 Your progress
               </span>
-              <span className="text-sm text-primary-foreground/80">25%</span>
+              <span className="text-sm text-primary-foreground/80">
+                {parseInt(id)} of 8 lessons completed — you're making progress
+              </span>
             </div>
-            <Progress value={25} className="h-2 bg-primary-foreground/20" />
+            <Progress value={(parseInt(id) / 8) * 100} className="h-2 bg-primary-foreground/20" />
+            <p className="text-xs text-primary-foreground/60 mt-2">
+              {parseInt(id) === 4 && '🎯 Halfway there!'}
+              {parseInt(id) === 7 && '🔥 Final lesson coming up!'}
+              {parseInt(id) < 4 && parseInt(id) > 1 && `Keep going — ~${(8 - parseInt(id)) * 15} minutes to finish this track`}
+            </p>
           </div>
         </div>
       </section>
