@@ -386,10 +386,16 @@ const LessonView = () => {
           <Badge variant="secondary" className="mb-4">
             Success
           </Badge>
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4">
-            You've finished lesson {id}
+          <h2 className="text-3xl font-bold text-primary-foreground mb-2">
+            Lesson complete — ready for the next one?
           </h2>
-          <p className="text-primary-foreground/80 mb-8">
+          <p className="text-primary-foreground/80 mb-4">
+            {parseInt(id) === 8 
+              ? "You've completed the entire track! 🎉" 
+              : `${8 - parseInt(id)} lessons remaining • ~${(8 - parseInt(id)) * 15} minutes to complete`
+            }
+          </p>
+          <p className="text-sm text-primary-foreground/70 mb-8">
             Keep the momentum going. Start the next lesson now.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
