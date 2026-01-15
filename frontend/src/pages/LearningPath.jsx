@@ -174,8 +174,12 @@ const LearningPath = () => {
     <div className="min-h-screen bg-primary">
       <Header showBack />
 
-      {/* Hero Section */}
-      <section className="px-4 py-12">
+      {isGenerating ? (
+        <PathGenerationLoader />
+      ) : (
+        <>
+          {/* Hero Section */}
+          <section className="px-4 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <Badge variant="secondary" className="mb-4">
             Ready
