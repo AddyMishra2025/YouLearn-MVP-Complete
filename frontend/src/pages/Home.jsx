@@ -92,10 +92,7 @@ const Home = () => {
   ];
 
   const handleGenerate = () => {
-    const query = searchQuery || 'Python';
-    navigate('/learning-path', {
-      state: { query, mode: 'quick', generated: true },
-    });
+    setIntentModalOpen(true);
   };
 
   const handleContinue = (path) => {
