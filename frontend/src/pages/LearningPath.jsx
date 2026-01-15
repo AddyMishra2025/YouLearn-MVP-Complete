@@ -62,6 +62,8 @@ const LearningPath = () => {
         description: 'Learn core concepts and terminology',
         duration: '15 minutes',
         icon: Target,
+        levelMatch: 'Beginner-friendly',
+        reason: 'Strong fundamentals',
       },
       {
         id: 2,
@@ -69,6 +71,8 @@ const LearningPath = () => {
         description: '15 minutes to understand the fundamentals',
         duration: '15 minutes',
         icon: Play,
+        levelMatch: 'Beginner-friendly',
+        reason: 'Clear explanation',
       },
     ],
     Intermediate: [
@@ -78,6 +82,8 @@ const LearningPath = () => {
         description: '30 minutes to build working knowledge',
         duration: '30 minutes',
         icon: Clock,
+        levelMatch: 'Intermediate-level',
+        reason: 'Widely recommended',
       },
       {
         id: 4,
@@ -85,6 +91,8 @@ const LearningPath = () => {
         description: 'Practice with real examples',
         duration: '20 minutes',
         icon: Play,
+        levelMatch: 'Intermediate-level',
+        reason: 'Practical application',
       },
     ],
     Advanced: [
@@ -94,6 +102,8 @@ const LearningPath = () => {
         description: '45 minutes to master the nuances',
         duration: '45 minutes',
         icon: Layers,
+        levelMatch: 'Advanced-level',
+        reason: 'Expert insights',
       },
       {
         id: 6,
@@ -101,6 +111,8 @@ const LearningPath = () => {
         description: 'Nineteen minutes. Learn from experts.',
         duration: '19 minutes',
         icon: TrendingUp,
+        levelMatch: 'Advanced-level',
+        reason: 'Industry-proven',
       },
     ],
   };
