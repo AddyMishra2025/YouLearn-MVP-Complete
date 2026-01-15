@@ -26,6 +26,8 @@ const LessonView = () => {
   const [quizOpen, setQuizOpen] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [achievementModalOpen, setAchievementModalOpen] = useState(false);
+  const [pathCompleted, setPathCompleted] = useState(false);
 
   const lesson = {
     id,
