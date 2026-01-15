@@ -19,11 +19,12 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const popularTopics = [
-    'Python',
     'Data Analytics',
-    'UI Design',
-    'Growth Marketing',
     'Product Management',
+    'UI/UX Design',
+    'Digital Marketing',
+    'Project Management',
+    'Software Engineering',
   ];
 
   const myPaths = [
