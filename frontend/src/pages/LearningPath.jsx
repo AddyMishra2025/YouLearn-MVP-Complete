@@ -274,6 +274,50 @@ const LearningPath = () => {
         </div>
       </section>
 
+      {/* Adjust Your Path - Control Section */}
+      {(selectedLevel || selectedRole) && (
+        <section className="px-4 pb-8">
+          <div className="max-w-5xl mx-auto">
+            <Card className="p-6 bg-card/30">
+              <h3 className="font-semibold mb-3">Not quite right?</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                You have full control. Adjust your path instantly.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setSelectedLevel(null);
+                    setSelectedRole(null);
+                  }}
+                >
+                  Adjust Level
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleChangePrompt}
+                >
+                  Refine Topic
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setMode(mode === 'quick' ? 'career' : 'quick');
+                    setSelectedLevel(null);
+                    setSelectedRole(null);
+                  }}
+                >
+                  Switch to {mode === 'quick' ? 'Career Path' : 'Quick Learning'}
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </section>
+      )}
+
       {/* Mode Selection */}
       <section className="px-4 py-8">
         <div className="max-w-5xl mx-auto">
