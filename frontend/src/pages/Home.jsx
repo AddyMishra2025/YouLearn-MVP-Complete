@@ -114,17 +114,18 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
+              <Badge variant="secondary" className="mb-4">
+                AI-Powered Career Development
+              </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-                Learn faster with AI-guided paths
+                Land your dream job with AI-guided skill building
               </h1>
               <p className="text-lg text-primary-foreground/90 mb-8">
-                YouTube has everything. YouLearn AI knows what matters for you.
-                Tell us your goal and get a structured path with hand-picked
-                lessons, ordered by difficulty, ready to start now.
+                Master in-demand skills for your target role. Get a personalized learning path with hand-picked content, ordered by difficulty. Build the expertise employers are looking for—in weeks, not years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Input
-                  placeholder="What do you want to learn?"
+                  placeholder="e.g., Product Manager, Data Analyst, UX Designer..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
@@ -132,7 +133,7 @@ const Home = () => {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button size="lg" variant="dark" onClick={handleGenerate}>
-                  Generate My Learning Path
+                  Build My Career Path
                 </Button>
                 <Button
                   size="lg"
@@ -140,14 +141,38 @@ const Home = () => {
                   className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
                   onClick={() => navigate('/trending')}
                 >
-                  Explore
+                  Explore Roles
                 </Button>
               </div>
+              <div className="mt-8 flex items-center gap-6 text-primary-foreground/80 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>15,000+ career changers</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Average 40% salary increase</span>
+                </div>
+              </div>
             </div>
-            <div className="bg-card/10 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
-              <div className="text-center text-primary-foreground/50">
-                <Sparkles className="w-20 h-20 mx-auto mb-4" />
-                <p>AI-Powered Learning</p>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1762341122735-d6ae18da4c01?w=800&q=80"
+                  alt="Professional working on career development"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-lg max-w-xs">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Maria just landed her role!</p>
+                    <p className="text-sm text-muted-foreground">Product Manager at Amazon</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
