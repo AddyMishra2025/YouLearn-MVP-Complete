@@ -73,13 +73,13 @@ const Resources = () => {
             Curated resources to empower you so you learn faster and retain more.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button size="lg" onClick={handleContinue}>
+            <Button size="lg" variant="dark" onClick={handleContinue}>
               Begin
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
               onClick={handleBack}
             >
               Skip
