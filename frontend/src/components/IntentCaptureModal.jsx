@@ -178,6 +178,36 @@ export const IntentCaptureModal = ({ open, onOpenChange }) => {
                   </button>
                 ))}
               </div>
+              
+              {/* Preview before generation */}
+              {intent.level && (
+                <div className="mt-6 p-4 bg-muted rounded-lg">
+                  <p className="text-sm font-semibold mb-3">Your learning path preview:</p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      <span>
+                        <strong className="text-foreground">Estimated time:</strong> ~{intent.level === 'beginner' ? '2-3' : intent.level === 'intermediate' ? '3-4' : '4-6'} hours
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      <span>
+                        <strong className="text-foreground">Number of lessons:</strong> {intent.level === 'beginner' ? '6-8' : intent.level === 'intermediate' ? '8-10' : '10-12'}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      <span>
+                        <strong className="text-foreground">Level:</strong> Matched to {intent.level} experience
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3 italic">
+                    This helps you commit confidently.
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
