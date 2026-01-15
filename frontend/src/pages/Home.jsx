@@ -146,6 +146,9 @@ const Home = () => {
                   Explore Roles
                 </Button>
               </div>
+              <p className="text-sm text-primary-foreground/70 mt-4">
+                Designed to help you finish, not just start.
+              </p>
               <div className="mt-8 flex items-center gap-6 text-primary-foreground/80 text-sm">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
