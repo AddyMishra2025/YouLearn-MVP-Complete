@@ -342,13 +342,13 @@ const Home = () => {
             Build your first path in under a minute
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={handleGenerate}>
+            <Button size="lg" variant="dark" onClick={handleGenerate}>
               Begin
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
               onClick={() => navigate('/trending')}
             >
               Browse
