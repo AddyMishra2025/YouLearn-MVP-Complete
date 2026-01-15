@@ -423,6 +423,19 @@ const LessonView = () => {
       </section>
 
       <Footer />
+      
+      {/* Achievement Modal */}
+      <AchievementModal
+        open={achievementModalOpen}
+        onOpenChange={setAchievementModalOpen}
+        achievement={{
+          title: lesson.title || 'Data Analytics Path',
+          lessonsCompleted: 8,
+          hoursSpent: 12,
+          quizScore: 92,
+          topic: 'data analytics',
+        }}
+      />
     </div>
   );
 };
