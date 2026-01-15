@@ -481,6 +481,8 @@ const LearningPath = () => {
       </section>
 
       <Footer />
+      </>
+      )}
     </div>
   );
 };
