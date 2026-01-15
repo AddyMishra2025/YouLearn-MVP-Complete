@@ -73,10 +73,18 @@ const LessonView = () => {
 
   const handleNextLesson = () => {
     const nextId = parseInt(id) + 1;
-    navigate(`/lesson/${nextId}`, { state: location.state });
-    setQuizOpen(false);
-    setQuizCompleted(false);
-    setSelectedAnswer(null);
+    
+    // Check if this was the last lesson (simulate with lesson 6)
+    if (nextId > 6) {
+      setPathCompleted(true);
+      setAchievementModalOpen(true);
+      setQuizOpen(false);
+    } else {
+      navigate(`/lesson/${nextId}`, { state: location.state });
+      setQuizOpen(false);
+      setQuizCompleted(false);
+      setSelectedAnswer(null);
+    }
   };
 
   return (
