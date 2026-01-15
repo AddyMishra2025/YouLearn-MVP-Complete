@@ -213,7 +213,7 @@ const Trending = () => {
           <p className="text-primary-foreground/80 mb-8">
             Create your own personalized learning path with AI
           </p>
-          <Button size="lg" onClick={() => navigate('/')}>
+          <Button size="lg" variant="dark" onClick={() => navigate('/')}>
             Generate My Path
           </Button>
         </div>
