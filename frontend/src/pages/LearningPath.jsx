@@ -18,6 +18,17 @@ const LearningPath = () => {
   );
   const [selectedRole, setSelectedRole] = useState(location.state?.role || null);
   const [query, setQuery] = useState(location.state?.query || 'Python');
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  // Simulate AI path generation
+  useEffect(() => {
+    if (location.state?.generated && !selectedLevel && !selectedRole) {
+      setIsGenerating(true);
+      setTimeout(() => {
+        setIsGenerating(false);
+      }, 2000);
+    }
+  }, [location.state?.generated, selectedLevel, selectedRole]);
 
   const levels = ['Beginner', 'Intermediate', 'Advanced'];
   const roles = [
