@@ -84,9 +84,9 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Subscribe</h3>
+            <h3 className="font-semibold mb-4">Stay Updated</h3>
             <p className="text-sm mb-3">
-              Join our newsletter to stay up to date on features and releases.
+              Get career tips and new learning paths delivered weekly.
             </p>
             <div className="flex gap-2">
               <Input
