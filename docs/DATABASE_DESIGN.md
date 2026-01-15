@@ -1,6 +1,6 @@
 # Database Design (Proposed Relational Schema)
 
-> This schema is a forward-looking proposal to support the current MVP features (learning paths, lessons, resources, progress, achievements, and sharing) with a relational database.
+> This schema is a proposal to support the current MVP features (learning paths, lessons, resources, progress, achievements, and sharing) with a relational database.
 
 ## Core Entities
 - **Users**: learner accounts and preferences.
