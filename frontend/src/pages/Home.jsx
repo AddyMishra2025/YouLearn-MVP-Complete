@@ -262,47 +262,65 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="px-4 py-12">
+      <section className="px-4 py-12 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Built for momentum
+            <Badge variant="secondary" className="mb-4">
+              How It Works
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Your personalized career accelerator
             </h2>
-            <p className="text-primary-foreground/80">
-              Structure without the weight of formal courses
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              AI-powered learning paths designed specifically for career transitions and skill upgrades
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-8">
-              <div className="mb-4">
-                <Target className="w-10 h-10 text-primary" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1758874384722-ab97b4c9af89?w=800&q=80"
+                  alt="Role-specific learning paths"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-semibold mb-3">
-                AI-powered learning paths
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Tell us what you want to learn. AI generates a curated path with
-                hand-picked YouTube lessons, ordered by difficulty and skill
-                progression.
-              </p>
-              <Button variant="link" className="p-0 h-auto">
-                Learn more <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
+              <div className="p-8">
+                <div className="mb-4">
+                  <Target className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">
+                  Role-specific learning paths
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Tell us your target role. AI generates a curated path with hand-picked content, ordered by skill level and relevance to your career goals.
+                </p>
+                <Button variant="link" className="p-0 h-auto">
+                  See how it works <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
+              </div>
             </Card>
-            <Card className="p-8">
-              <div className="mb-4">
-                <TrendingUp className="w-10 h-10 text-primary" />
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1758518730178-6e237bc8b87d?w=800&q=80"
+                  alt="Build job-ready skills"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-semibold mb-3">
-                Summaries and quizzes
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Every lesson comes with an AI summary, notes, and a quick quiz to
-                lock in what you learned.
-              </p>
-              <Button variant="link" className="p-0 h-auto">
-                Learn more <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
+              <div className="p-8">
+                <div className="mb-4">
+                  <TrendingUp className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">
+                  Build job-ready skills
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Every lesson includes projects, quizzes, and real-world applications. Build a portfolio that proves your skills to employers.
+                </p>
+                <Button variant="link" className="p-0 h-auto">
+                  View sample projects <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
+              </div>
             </Card>
           </div>
         </div>
