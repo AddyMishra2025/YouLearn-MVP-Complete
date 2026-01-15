@@ -360,7 +360,7 @@ const LearningPath = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                        className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
                         onClick={() => setSelectedRole(null)}
                       >
                         Change Role
