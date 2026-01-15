@@ -19,6 +19,8 @@ import { Sparkles, TrendingUp, Target, ArrowRight, Star, CheckCircle } from 'luc
 const Home = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
+  const [intentModalOpen, setIntentModalOpen] = useState(false);
+  const [achievementModalOpen, setAchievementModalOpen] = useState(false);
 
   const popularTopics = [
     'Data Analytics',
