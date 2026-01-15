@@ -340,9 +340,14 @@ const LearningPath = () => {
                 <div>
                   <div className="mb-8">
                     <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground">
-                        Your structured learning path
-                      </h2>
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground">
+                          Your structured learning path
+                        </h2>
+                        <p className="text-sm text-primary-foreground/70 mt-1">
+                          ~{Object.values(quickLearningLessons).flat().length * 20} minutes to complete • {Object.values(quickLearningLessons).flat().length} lessons
+                        </p>
+                      </div>
                       <Button
                         variant="outline"
                         size="sm"
