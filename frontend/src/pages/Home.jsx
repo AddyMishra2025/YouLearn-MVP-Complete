@@ -217,8 +217,11 @@ const Home = () => {
       <section className="px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
+            <Badge variant="secondary" className="mb-4">
+              Your Career Journey
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
-              Your learning paths
+              Continue building your career
             </h2>
             <p className="text-primary-foreground/80">Pick up where you left off</p>
           </div>
@@ -226,23 +229,32 @@ const Home = () => {
             {myPaths.map((path) => (
               <Card
                 key={path.id}
-                className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
                 onClick={() => handleContinue(path)}
               >
-                <Badge
-                  variant={path.status === 'Active' ? 'default' : 'secondary'}
-                  className="mb-3"
-                >
-                  {path.status}
-                </Badge>
-                <h3 className="text-xl font-semibold mb-2">{path.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {path.progress}. {path.message}
-                </p>
-                <Button variant="link" className="p-0 h-auto">
-                  {path.status === 'Active' ? 'Continue' : 'Resume'}
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={`${path.image}?w=600&q=80`}
+                    alt={path.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <Badge
+                    variant={path.status === 'Active' ? 'default' : 'secondary'}
+                    className="mb-3"
+                  >
+                    {path.status}
+                  </Badge>
+                  <h3 className="text-xl font-semibold mb-2">{path.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {path.progress}. {path.message}
+                  </p>
+                  <Button variant="link" className="p-0 h-auto">
+                    {path.status === 'Active' ? 'Continue' : 'Resume'}
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </div>
               </Card>
             ))}
           </div>
