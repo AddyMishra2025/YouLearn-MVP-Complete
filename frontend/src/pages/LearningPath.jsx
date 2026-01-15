@@ -195,11 +195,11 @@ const LearningPath = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-center gap-3 mb-12">
             <Button
-              variant={mode === 'quick' ? 'default' : 'outline'}
+              variant={mode === 'quick' ? 'dark' : 'outline'}
               onClick={() => setMode('quick')}
               className={
                 mode !== 'quick'
-                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base'
+                  ? 'bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground text-sm sm:text-base'
                   : 'text-sm sm:text-base'
               }
               size="sm"
@@ -207,11 +207,11 @@ const LearningPath = () => {
               Quick Learning
             </Button>
             <Button
-              variant={mode === 'career' ? 'default' : 'outline'}
+              variant={mode === 'career' ? 'dark' : 'outline'}
               onClick={() => setMode('career')}
               className={
                 mode !== 'career'
-                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base'
+                  ? 'bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground text-sm sm:text-base'
                   : 'text-sm sm:text-base'
               }
               size="sm"
