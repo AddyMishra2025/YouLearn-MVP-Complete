@@ -193,15 +193,16 @@ const LearningPath = () => {
       {/* Mode Selection */}
       <section className="px-4 py-8">
         <div className="max-w-5xl mx-auto">
-          <div className="flex justify-center gap-4 mb-12">
+          <div className="flex justify-center gap-3 mb-12">
             <Button
               variant={mode === 'quick' ? 'default' : 'outline'}
               onClick={() => setMode('quick')}
               className={
                 mode !== 'quick'
-                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10'
-                  : ''
+                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base'
+                  : 'text-sm sm:text-base'
               }
+              size="sm"
             >
               Quick Learning
             </Button>
@@ -210,9 +211,10 @@ const LearningPath = () => {
               onClick={() => setMode('career')}
               className={
                 mode !== 'career'
-                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10'
-                  : ''
+                  ? 'bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-base'
+                  : 'text-sm sm:text-base'
               }
+              size="sm"
             >
               Career Path
             </Button>
