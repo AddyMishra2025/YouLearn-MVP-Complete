@@ -192,8 +192,11 @@ const LearningPath = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Your learning path
           </h1>
-          <p className="text-lg text-primary-foreground/80 mb-6">
+          <p className="text-lg text-primary-foreground/80 mb-3">
             Start with lesson one or adjust your path if something doesn't fit.
+          </p>
+          <p className="text-sm text-primary-foreground/70 mb-6">
+            This path is curated to be completed, not endlessly browsed.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button size="lg" variant="dark" onClick={handleContinue}>
@@ -208,6 +211,54 @@ const LearningPath = () => {
               Change Prompt
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Why This Path - Trust Signal */}
+      <section className="px-4 pb-8">
+        <div className="max-w-5xl mx-auto">
+          <Collapsible>
+            <CollapsibleTrigger className="w-full">
+              <Card className="p-4 cursor-pointer hover:bg-accent/50 transition-colors">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                    <h3 className="font-semibold">Why this path?</h3>
+                  </div>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                </div>
+              </Card>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <Card className="mt-2 p-6 bg-card/50">
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Relevance-first curation:</strong> Videos are selected based on clarity, progression, and how well they teach core concepts.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Matched to your level:</strong> Content is filtered to match {selectedLevel || selectedRole || 'your selected experience level'}, so you won't be overwhelmed or bored.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Intentional sequencing:</strong> Lessons are ordered to build on each other, not randomly assembled.
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t">
+                    <p className="text-muted-foreground italic">
+                      This path is designed to help you finish, not just start.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </section>
 
