@@ -165,8 +165,11 @@ const LessonView = () => {
               <Card className="p-6">
                 <div className="flex items-start gap-4 mb-4">
                   <FileText className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">AI Summary</h3>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-1">AI Summary</h3>
+                    <p className="text-xs text-muted-foreground mb-4">
+                      High-signal summary generated to reinforce understanding
+                    </p>
                     <p className="text-muted-foreground leading-relaxed">
                       {lesson.summary}
                     </p>
