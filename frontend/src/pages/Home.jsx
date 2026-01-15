@@ -241,13 +241,23 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <Badge
-                    variant={path.status === 'Active' ? 'default' : 'secondary'}
-                    className="mb-3"
-                  >
-                    {path.status}
-                  </Badge>
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge
+                      variant={path.status === 'Active' ? 'default' : 'secondary'}
+                    >
+                      {path.status}
+                    </Badge>
+                    <span className="text-xs text-muted-foreground">
+                      {Math.round((parseInt(path.progress.split(' ')[0]) / parseInt(path.progress.split(' ')[2])) * 100)}%
+                    </span>
+                  </div>
                   <h3 className="text-xl font-semibold mb-2">{path.title}</h3>
+                  <div className="mb-3">
+                    <Progress 
+                      value={(parseInt(path.progress.split(' ')[0]) / parseInt(path.progress.split(' ')[2])) * 100} 
+                      className="h-2"
+                    />
+                  </div>
                   <p className="text-sm text-muted-foreground mb-4">
                     {path.progress}. {path.message}
                   </p>
