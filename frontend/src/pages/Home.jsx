@@ -450,6 +450,23 @@ const Home = () => {
       </section>
 
       <Footer />
+      
+      {/* Modals */}
+      <IntentCaptureModal 
+        open={intentModalOpen} 
+        onOpenChange={setIntentModalOpen} 
+      />
+      <AchievementModal
+        open={achievementModalOpen}
+        onOpenChange={setAchievementModalOpen}
+        achievement={{
+          title: 'Data Analytics for Career Growth',
+          lessonsCompleted: 8,
+          hoursSpent: 12,
+          quizScore: 92,
+          topic: 'data analytics',
+        }}
+      />
     </div>
   );
 };
