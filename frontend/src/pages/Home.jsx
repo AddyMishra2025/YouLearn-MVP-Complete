@@ -420,15 +420,18 @@ const Home = () => {
       {/* Final CTA */}
       <section className="px-4 py-16">
         <div className="max-w-2xl mx-auto text-center">
+          <Badge variant="secondary" className="mb-4">
+            Start Today
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Start learning now
+            Ready to accelerate your career?
           </h2>
           <p className="text-primary-foreground/80 mb-8">
-            Build your first path in under a minute
+            Join 15,000+ professionals who've transformed their careers with AI-guided learning
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="dark" onClick={handleGenerate}>
-              Begin
+              Start Building Skills
             </Button>
             <Button
               size="lg"
@@ -436,9 +439,12 @@ const Home = () => {
               className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
               onClick={() => navigate('/trending')}
             >
-              Browse
+              Explore Career Paths
             </Button>
           </div>
+          <p className="text-sm text-primary-foreground/60 mt-6">
+            No credit card required • Start learning in 2 minutes
+          </p>
         </div>
       </section>
 
