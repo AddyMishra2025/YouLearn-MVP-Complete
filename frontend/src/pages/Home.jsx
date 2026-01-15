@@ -12,7 +12,7 @@ import {
   AccordionTrigger,
 } from '../components/ui/accordion';
 import { Badge } from '../components/ui/badge';
-import { Sparkles, TrendingUp, Target, ArrowRight, Star } from 'lucide-react';
+import { Sparkles, TrendingUp, Target, ArrowRight, Star, CheckCircle } from 'lucide-react';
 
 const Home = () => {
   const navigate = useNavigate();
